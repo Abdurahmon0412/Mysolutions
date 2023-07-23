@@ -22,7 +22,7 @@ namespace Mysolutions
             var Passgenerat = new PasswordGenerator();
             var password = Passgenerat.Generate(hasdigit,hasletter,hassymbol,length);
 
-            Console.WriteLine(password);
+            Console.WriteLine("Your password is created: " + password);
         }
     }
 }

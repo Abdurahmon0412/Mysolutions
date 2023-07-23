@@ -23,8 +23,16 @@ namespace Practice10_2
                 }
                 if (hasLetters)
                 {
-                    password.Add(Convert.ToString(Convert.ToChar(rd.Next(96, 122))));
-                    i++;
+                    var r = rd.Next(0,2);
+                    if (r == 1)
+                    {
+                        password.Add(Convert.ToString(Convert.ToChar(rd.Next(96, 122))));
+                        i++;
+                    }
+                    if(r == 0)
+                    {
+                        password.Add(Convert.ToString(Convert.ToChar(rd.Next(65, 90))));
+                    }
                 }
                 if (hasSymbol)
                 {
