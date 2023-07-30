@@ -27,8 +27,8 @@ namespace N15_1
         public double AB { get => GetLenght(A, B); }
         public double BC { get => GetLenght(A, B); }
         public double CD { get => GetLenght(A, B); }
-        public double AD { get => GetLenght(A, B); }
-        public double AC { get => GetLenght(A, C); }
+        public double AD { get => GetLenght(A, B);}
+        public double AC { get => GetLenght(A, C);}
 
 
         public double Area
