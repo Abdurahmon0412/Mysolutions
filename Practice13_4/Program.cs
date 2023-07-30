@@ -52,6 +52,8 @@ List<string> OsonAnswer = new List<string>()
 var standart = 0;
 var correct = 0;
 var incorrect = 0;
+var oson = 0;
+var qiyin = 0;
 while (true)
 {
     try
@@ -71,14 +73,16 @@ while (true)
         if (correct == 2)
         {
             correct = 0;
-            StandardAnswer.Insert(standart +1, QiyinAnswer[standart]);
-            StandardQuestion.Insert(standart +1 , QiyinQuestion[standart]);
+            StandardAnswer.Insert(standart +1, QiyinAnswer[qiyin]);
+            StandardQuestion.Insert(standart +1 , QiyinQuestion[qiyin]);
+            qiyin++;
         }
         else if (incorrect == 2)
         {
             incorrect = 0;
-            StandardQuestion.Insert(standart + 1, OsonQuestion[standart]);
-            StandardAnswer.Insert(standart + 1, OsonAnswer[standart]);
+            StandardQuestion.Insert(standart + 1, OsonQuestion[oson]);
+            StandardAnswer.Insert(standart + 1, OsonAnswer[oson]);
+            oson++;
 
         }
         standart++;

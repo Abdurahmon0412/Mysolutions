@@ -2,46 +2,48 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Practice10_3
 {
     public class Validator
     {
-        public string isvalidage {get;set;}
-        public string isvalidfirstname {get;set;}
-        public string isvalidlastname { get; set; }
-        public string isvalidemailaddress { get; set; }
-        public string isvalidphonenumber { get; set; }
 
-        public Validator(string age, string firstname, string lastname,string emailaddress,string phonenumber) 
-        {
 
-        }
+
 
         public bool IsValidAge(string age)
         {
+            if(int.TryParse(age, out int value))
+            {
+                return true;
+            }
             return false;
         }
 
         public bool IsValidFirstName(string firstname)
         {
-            return false;
+            Regex firstnames = new Regex("^[a-zA-Z'-]+$");
+            return firstnames.IsMatch(firstname);
         }
 
         public bool IsValidLastName(string lastName)
         {
-            return false;
+            Regex lastNames = new Regex("^[a-zA-Z'-]+$");
+            return lastNames.IsMatch(lastName);
         }
 
-        public bool IsValidEmailAddress(string emailaddress)
+
+    public bool IsValidEmailAddress(string emailaddress)
         {
-            return false;
+            Regex _forEmail = new Regex("^[a-zA-Z0-9._%+-] +@[a-zA-Z0-9.-] +\\.[a-zA-Z] { 2,}$");
+            return _forEmail.IsMatch(emailaddress);
         }
-
         public bool IsValidPhoneNumber(string phoneNumber)
         {
-            return false;
+            Regex _forPhoneNumber = new Regex("^\\+?\\d{1,3}?[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}$");
+            return _forPhoneNumber.IsMatch(phoneNumber);
         }
     }
 }
