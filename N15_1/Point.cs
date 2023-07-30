@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N15_1.Ragtangle
+namespace N15_1
 {
     public class Point
     {

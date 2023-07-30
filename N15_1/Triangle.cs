@@ -11,6 +11,7 @@ namespace N15_1
         public double A { get; set; }
         public double B { get; set; }
         public double C { get; set; }
+        public double Perimeter { get => A + B + C; }
 
         public Triangle(double a, double b, double c)
         {
@@ -21,7 +22,6 @@ namespace N15_1
             C = c;
         }
 
-        public double Perimeter { get => A + B + C; }
         public double Area
         {
             get
