@@ -14,5 +14,10 @@ namespace Practice10_4
         public string Tag { get; set; }
         public int Likes { get; set; }
         public int Dislikes { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Title} - {Content} - {Tag}\nLikes: {Likes}\tDislikes:{Dislikes}";
+        }
     }
 }
