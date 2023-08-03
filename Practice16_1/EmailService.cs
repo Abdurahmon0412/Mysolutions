@@ -27,8 +27,8 @@ namespace Practice16_1
         public void SendEmail(string receiverEmail,string name)
         {
             
-            var CredentialAddress = "sultonbek.rakhimov.recovery@gmail.com";
-            var CredentialPassword = "szabguksrhwsbtie";
+            var CredentialAddress = "abdurahmonsadriddinov0412@gmail.com";
+            var CredentialPassword = "bypucbhumkeghlab";
 
             var mail = new MailMessage(CredentialAddress, receiverEmail);
             mail.Subject = "Siz muvaffaqiyatli registratsiyadan o'tdingiz";
