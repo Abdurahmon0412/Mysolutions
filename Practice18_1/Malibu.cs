@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Practice18_1
 {
-    internal sealed class Captive:Car
+    public sealed class Captive:Car
     {
         public static string Passengers { get; set; }
         public readonly int maxspeed;
@@ -19,6 +19,8 @@ namespace Practice18_1
 
         public override void Drive()
         {
+            Console.Clear();
+            Thread.Sleep(3000);
             var rd = new Random();
             var random = rd.Next(0, 1);
             while(random < 100)
@@ -29,3 +31,4 @@ namespace Practice18_1
         }
     }
 }
+
