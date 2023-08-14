@@ -68,17 +68,21 @@ List<Player> players = new List<Player>()
 //    .ForEach(a => Console.WriteLine($"Name: {a.Name} - Level: {a.Level}"));
 
 //Join: 
-var result = players.Join(teams,
-                        player => player.TeamId,
-                        team => team.Id,
-                        (player, team) => new
-                        {
-                            ClubName = team.ClubName,
-                            Name = player.Name,
-                            Level = player.Level
-                        });
-result.ToList().ForEach(player => Console.WriteLine($"Club: {player.ClubName.PadRight(15)}" +
-    $"Name: {player.Name.PadRight(15)} {player.Level}"));
+//var result = players.Join(teams,
+//                        player => player.TeamId,
+//                        team => team.Id,
+//                        (player, team) => new
+//                        {
+//                            ClubName = team.ClubName,
+//                            Name = player.Name,
+//                            Level = player.Level
+//                        });
+//result.ToList().ForEach(player => Console.WriteLine($"Club: {player.ClubName.PadRight(15)}" +
+//    $"Name: {player.Name.PadRight(15)} {player.Level}"));
+
+int sum = players.Aggregate(23, (acc, num) => acc + num.Level);
+Console.WriteLine(sum);
+
 //Aggregate: 
 
 //GroupBy: 
